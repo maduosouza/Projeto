@@ -7,9 +7,9 @@
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
-  --stroke-color:  #ffffff80;
+  --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --surface-color-hover: , rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
@@ -17,7 +17,7 @@
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(./assets/sun.svg);
@@ -32,11 +32,11 @@ body {
 
   /* background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
   }
   body * {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
-    height: 100vh;
   }
   
   #container{
@@ -57,7 +57,6 @@ body {
 
   #profile p{
     font-weight: 500;
-    font-size: 16px;
     line-height: 24px;
     margin-top: 8px;
   }
@@ -79,6 +78,7 @@ body {
     transform: translateY(-50%);
     top: 50%;
     z-index: 1;
+    left: 0;
     
     animation: slide-back 0.2s;
   }
@@ -87,7 +87,7 @@ body {
     outline: 8px solid ver(--highlight-color);
   }
   .light #switch button {
-    animation: slide-in 0.4s forwards;
+    animation: slide-in 0.2s forwards;
   }
 
   #switch span {
